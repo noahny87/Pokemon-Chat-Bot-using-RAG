@@ -18,7 +18,7 @@ config = BitsAndBytesConfig(
     bnb_4bit_compute_dtype=torch.bfloat16,
 )
 #load csv file
-loader = CSVLoader(file_path = "C:\\Users\\noahn\\OneDrive\\LLM\\pokemon.csv", encoding = "utf-8", csv_args = {'delimiter':","})
+loader = CSVLoader(file_path = "pokemon.csv", encoding = "utf-8", csv_args = {'delimiter':","})
 data = loader.load()
 #split data into chunks 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size = 1000, chunk_overlap = 20)
@@ -29,7 +29,7 @@ embeddings = HuggingFaceBgeEmbeddings(model_name = "sentence-transformers/all-Mi
 #store embeddings in vector store 
 docsearch = FAISS.from_documents(text_chunks, embeddings)
 #save vector store 
-docsearch.save_local("C:\\Users\\noahn\\OneDrive\\LLM\\vectorstore")
+docsearch.save_local("vectorstore")
 #create sample query 
 
 #tokenizer = AutoTokenizer.from_pretrained("HuggingFaceTB/SmolLM-1.7B")
