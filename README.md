@@ -1,0 +1,3 @@
+This project is my attempt at creating a pokemon ai chatbot on my own computer using free opensource models like Llama 3 8b. The pokemon data I used is from Kaggle and to import the model you need a HuggingFace account and token along with agreeing to Meta's licensing to access the LLM.
+
+The hardest part about this was getting the RAG aspect of the LLM implemented as methods used to implement RAG online vary drastically from site to site but found in simple terms it uses a search based on similarity or cosine similarity. This helped me find out how to implement document search within a vector database along with word embeddings free from huggingface themselves! 
