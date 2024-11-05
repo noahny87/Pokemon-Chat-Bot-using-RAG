@@ -51,7 +51,7 @@ def chat_with_model(Context1, query):
     context = " ".join([doc.page_content for doc in docs])
     
     # Prepare the input for the language model
-    input_text = f"Here is the context to the question the user asked: {context}\n Here is the question the user asked: {query}" 
+    input_text = f"context: {context}\n question user asked: {query}" 
     # Note: You can adjust padding and truncation options as needed
     
     # Generate response
